@@ -2,7 +2,7 @@
 
 function scoreChecker(int $score)
 {
-    if (101 > $score || -1 < $score) {
+    if (101 < $score || 0 > $score) {
         throw new Exception();
     }
 
