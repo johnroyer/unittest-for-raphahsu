@@ -19,6 +19,12 @@ class CheckerTest extends TestCase
      */
     public function testInputRange($score, $expected)
     {
+        try {
+            scoreChecker($score);
+            $this->assertTrue($expected);
+        } catch (Exception $e) {
+            $this->assertFalse($expected);
+        }
     }
 
     public function ScoreRangeProvider()
